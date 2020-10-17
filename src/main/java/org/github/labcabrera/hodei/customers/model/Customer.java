@@ -8,8 +8,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
+import org.github.labcabrera.hodei.customers.serialization.RoleManagerFilter;
 import org.github.labcabrera.hodei.customers.validation.annotation.ExistingCountry;
-import org.github.labcabrera.hodei.serialization.RoleManagerFilter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

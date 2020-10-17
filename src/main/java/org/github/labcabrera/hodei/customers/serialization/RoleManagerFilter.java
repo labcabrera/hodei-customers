@@ -1,4 +1,4 @@
-package org.github.labcabrera.hodei.serialization;
+package org.github.labcabrera.hodei.customers.serialization;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

@@ -1,6 +1,6 @@
 package org.github.labcabrera.hodei.customers.model;
 
-import org.github.labcabrera.hodei.serialization.RoleManagerFilter;
+import org.github.labcabrera.hodei.customers.serialization.RoleManagerFilter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
