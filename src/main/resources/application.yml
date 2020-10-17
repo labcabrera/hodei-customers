@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: hodei-customers
+  cloud:
+    stream:
+      function:
+        definition: customerCreation;customerModification
+      bindings:
+
+        customerCreation-in-0:
+          destination: hodei-customers
+          group: creation
+          consumer:
+            max-attempts: 3
+            back-off-initial-interval: 1000
+            retryable-exceptions:
+              javax:
+                validation:
+                  ConstraintViolationException: false
+
+        customerModification-in-0:
+          destination: hodei-customers
+          group: modification
+          consumer:
+            max-attempts: 3
+            back-off-initial-interval: 1000
+            retryable-exceptions:
+              javax:
+                validation:
+                  ConstraintViolationException: false
+
+  rabbitmq:
+    host: cnp-rabbit
+
+  data:
+    mongodb:
+      database: hodei-customers
+      port: 27017
+      host: cnp-mongo
+
+logging:
+  level:
+    root: info
+    org.springframework.data: warn
+    org.github.labcabrera: debug
+
+
